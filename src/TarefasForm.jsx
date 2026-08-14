@@ -9,12 +9,13 @@ const TarefasForm = ({onAddTarefa }) => {
 
         if (tarefa.trim()) {
             onAddTarefa(tarefa.trim());
+            
             setTarefa("");
         }
     };
 
     return (
-        <form onSUbmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input type="text" value= {tarefa} onChange={(e) => setTarefa(e.target.value)} />
             <button type= "submit">Adicionar</button>
         </form>
