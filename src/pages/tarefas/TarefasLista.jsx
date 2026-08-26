@@ -1,6 +1,6 @@
 //TarefasLista.jsx
 
-import TarefasItem from "./TarefasItem";
+import TarefasItem from "./pages/tarefas/TarefasItem";
 
 const TarefasLista = ({ tarefas, onEditTarefa, onDeleteTarefa }) => {
 return (

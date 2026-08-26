@@ -1,6 +1,6 @@
 //AppTarefas.jsx
 import { useState } from "react"
-import TarefasLista from "./TarefasLista";
+import TarefasLista from "../../TarefasLista";
 import TarefasForm from "./TarefasForm";
 
 const AppTarefas = () => {
