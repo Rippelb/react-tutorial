@@ -5,6 +5,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
 import AppTarefas from './pages/tarefas/AppTarefas'
 import Sobre from './pages/Sobre'
+import Usuarios from './pages/Usuarios'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/tarefas">Tarefas</Link></li>
+              <li><Link to="/usuarios">Usuarios</Link></li>
               <li><Link to="/sobre">Sobre</Link></li>
             </ul>
           </nav>
@@ -26,6 +28,7 @@ function App() {
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tarefas/*" element={<AppTarefas />} />
+          <Route path="/usuarios" element={<Usuarios />} />
           <Route path="/sobre" element={<Sobre />} />
           </Routes>
           </div>
