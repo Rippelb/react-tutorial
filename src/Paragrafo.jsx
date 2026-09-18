@@ -9,16 +9,18 @@ const Paragrafo = (props) => {
 
     const diminuirPontos = () => {
         if (pontos > 0)
-        setPontos(pontos - 1);
-}
+            setPontos(pontos - 1);
+    }
 
     return (
         <div>
-            <p>{props.nome} tem {pontos} pontos.
-            <button onClick={aumentarPontos}>+</button>
-            <button onClick={diminuirPontos}>-</button></p>
-            
+            <p>
+                {props.nome} tem {pontos} pontos.
+                <button onClick={aumentarPontos}>+</button>
+                <button onClick={diminuirPontos}>-</button>
+            </p>
         </div>
     );
 }
-export default Paragrafo;
+
+export default Paragrafo

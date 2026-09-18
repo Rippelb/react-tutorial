@@ -1,11 +1,15 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from '../contexts/ThemeContext';
+// src/components/ThemeToggleButton.jsx
+import { useContext } from "react"
+import { ThemeContext } from "../contexts/ThemeContext"
 
-export const ThemeToggleButton = () => {
-    const { theme, toogleTheme } = useContext(ThemeContext);
-  return (
-    <button onClick={toogleTheme}>
-        Alterar dificuldade para{theme === "light" ? "Negro" : "Branco"}
-    </button>
-  )
+const ThemeToggleButton = () => { 
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
+    return (
+        <button onClick={toggleTheme} className={theme}>
+            Mudar para o tema { theme === 'light' ? 'Escuro' : 'Claro' }
+        </button>
+    )
 }
+
+export default ThemeToggleButton;

@@ -1,21 +1,24 @@
+// src/contexts/ThemeContext.jsx
 import { createContext, useState } from "react";
 
-//cria um contexto
+// Cria um contexto
 export const ThemeContext = createContext();
 
-//cria o provider
+// Cria o "provider" para fornecer as informações
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState("light");
-    
+    const [theme, setTheme] = useState('light');
 
-    const toogleTheme = () => {
-        setTheme(currentTheme => currentTheme === "light" ? "dark" : "light");
+    const toggleTheme = () => {
+        setTheme(currentTheme => currentTheme === 'light' ? 'dark' : 'light');
+        
         const body = document.body;
-        body.className = theme === "light" ? "dark" : "light";
+        body.className = theme === 'light' ? 'dark' : 'light';
     }
 
+    const value = { theme, toggleTheme }
+
     return (
-        <ThemeContext value={{ theme, toogleTheme }}>
+        <ThemeContext value={value}>
             {children}
         </ThemeContext>
     );
